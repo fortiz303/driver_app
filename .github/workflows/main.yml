@@ -1,7 +1,5 @@
 name: Hello-World and Cache Pipeline
-on:
-  schedule:
-  - cron: "0 2 * * 1-5"
+on: [push]
 jobs:
   myjob:
     runs-on: ubuntu-latest
