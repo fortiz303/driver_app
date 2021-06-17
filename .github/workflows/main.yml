@@ -11,9 +11,7 @@ jobs:
     - name: Send email
       uses: dawidd6/action-send-mail@v3.2.0
       with:
-      # SMTP server address
         server_address: smtp.gmail.com
-      # SMTP server port
         server_port: 465
       # Authenticate as this user to SMTP server
         username: ${{secrets.MAIL_USERNAME}}
