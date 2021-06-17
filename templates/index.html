@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Teeny House</title>
+</head>
+<body>
+  <h1>Welcome to the Teeny House website!</h1>
+  <h2>If you're a company looking for a truck driver, feel free to visit our driver showroom!</h2>
+  <a href="/showroom" class="showroom_btn">visit showroom</a>
+
+</body>
+<style>
+@keyframes float {
+  to {
+    transform: translateY(0.75em);
+  }
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  height: 100vh;
+  background: #121212;
+  font-family: 'Lato', sans-serif;
+  color: #FFFFFF;
+}
+
+.showroom_btn {
+  --p: 0;
+  --q: calc(1 - var(--p));
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  width: 12em;
+  background: #fff;
+  color: #000;
+  font: 700 1.125em/ 3 trebuchet ms, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.showroom_btn:before, .showroom_btn:after {
+  --i: var(--p);
+  --j: calc(1 - var(--i));
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--j)*(100% - 12.36932em));
+  width: 12.36932em;
+  transform-origin: calc(var(--j)*100%) calc(var(--i)*100%);
+  transform: rotate(-14.03624deg) translate(calc(var(--q)*(1 - 2*var(--i))*-100%));
+  box-shadow: 0 0 0 1px currentcolor;
+  background: currentcolor;
+  color: #ffee57;
+  transition: transform .5s ease-in-out;
+  content: "";
+}
+.showroom_btn:after {
+  --i: var(--q);
+}
+.showroom_btn:hover, .showroom_btn:focus {
+  --p: 1;
+}
+
+</style>
+</html>
